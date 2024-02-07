@@ -1,6 +1,7 @@
 # Cocket
 
 cocket is a c socket training project.
+includes error handling for each of the socket event.
 
 ## Example
 
