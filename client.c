@@ -68,10 +68,12 @@ int main() {
         err("could not the buffersend to the socket %d", errno);
         exit(EXIT_FAILURE);
       }
+      ok("sent message %s to server", buffer);
     } else if (fds[1].revents & POLLIN) {
-      if (recv(socket_handle, buffer, 255, 0) == 0) {
+      if (recv(socket_handle, buffer, 512, 0) == 0) {
         return 0;
       }
+      ok("server sent : ");
       printf("%s\n", buffer);
     }
   }
