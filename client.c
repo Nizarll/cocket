@@ -10,18 +10,18 @@
 
 #define warn(msg, ...)                                                         \
   printf("\x1b[38;2;240;190;100m"                                              \
-         "\u26A0  | " msg "\x1b[0m\n",                                         \
+         "[\u26A0] | " msg "\x1b[0m\n",                                        \
          ##__VA_ARGS__);
 
 #define err(msg, ...)                                                          \
   printf("\x1B[33m"                                                            \
          "\x1b[38;2;255;100;100m"                                              \
-         "\u2757 | " msg "\x1B[0m\n",                                          \
+         "[!] | " msg "\x1B[0m\n",                                             \
          ##__VA_ARGS__)
 
 #define ok(msg, ...)                                                           \
   printf("\x1B[92m"                                                            \
-         "\u2705 | " msg "\x1B[0m\n",                                          \
+         "[\u2705] | " msg "\x1B[0m\n",                                        \
          ##__VA_ARGS__)
 
 #define PORT 3000
